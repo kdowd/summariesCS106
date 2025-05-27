@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" color-scheme="light">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="https://unpkg.com/open-props@1.7.15/open-props.min.css" />
+		<link rel="stylesheet" href="./op.css" />
+		<link rel="stylesheet" href="./main.css" />
+		<script src="./main.js" defer></script>
+	</head>
+	<body>
+		<header class="surface-5 rad-shadow hero-heading">
+			<h1>CS106 Projects</h1>
+			<h2 class=" ">Acceptance Tests / Summaries</h2>
+			<h3 class="bullet">
+				<span class="swatch brand rad-shadow"></span>
+				<span>Group Summaries * 6</span>
+			</h3>
+		</header>
+
+		<main>
+			<section>
+				<div class="surface-samples">
+					<div class="surface-1 rad-shadow"><span>JOSH</span></div>
+					<div class="surface-2 rad-shadow"><span>RIKHIL/ VISHESH/KARTIK</span></div>
+					<div class="surface-3 rad-shadow"><span>SANTOSH/SAMMY</span></div>
+					<div class="surface-4 rad-shadow"><span>JOAN</span></div>
+					<div class="surface-5 rad-shadow"><span>JASON</span></div>
+					<div class="surface-6 rad-shadow"><span>WILSON</span></div>
+				</div>
+			</section>
+
+			<section data-group="group-one">
+				<p class="text-2">Project Summary: Rallypoint</p>
+				<p class="text-1">
+					Rallypoint is a tech startup located in Auckland NZ and has contracted you to develop their app for initial
+					release.
+				</p>
+				<p class="text-1">
+					Primarily focused on event promotion they have given you a list of must have features for the app which are;
+				</p>
+				<ul>
+					<li><p class="text-1">Users must be able to view all events posted globally.</p></li>
+					<li>
+						<p class="text-1">
+							Access to social media aspects including chats and video and image interaction without requiring further
+							verification than the initial account setup.
+						</p>
+					</li>
+				</ul>
+
+				<p class="text-1">
+					The second part of the required features includes a semi automated verification system for hosts, which will
+					determine whether or not a user is eligible to become a verified host and begin posting events.
+				</p>
+				<p class="text-1">
+					This verification should include at least one of the following, Identity and/or Location verification.
+				</p>
+				<p class="text-1">
+					And finally the app should be deployable across mobile platforms either ios and or android, along with web and
+					potentially desktop compatibility. Apart from these mandatory features Rallypoints executives have given you
+					developmental discretion in regards to other features of the application.
+				</p>
+
+				<p class="text-1">
+					As this is a startup company Rallypoint has requested that dev costs and hosting should be kept to a minimum;
+					and therefore have chosen to contract you as they believe you will be able to create a functioning app that is
+					set up for scaling right from the start all while maintaining budget friendly.
+				</p>
+
+				<p class="text-2">User Stories (Non-Technical Language):</p>
+				<ul>
+					<li>
+						<p class="text-1">
+							User A - Will sign up for an account and complete profile setup either through the app create account page
+							or through the verification portal.
+						</p>
+					</li>
+					<li>
+						<p class="text-1">
+							User A - Now has access to standard user features including access to the map view, chat, explore and
+							profile pages.
+						</p>
+					</li>
+					<li>
+						<p class="text-1">
+							User B - Has completed online verification and now navigates to the add event option from the profile page
+							and can now post their first event, and has added user A to a group chat where that event is now shared to
+							user A.
+						</p>
+					</li>
+					<li>
+						<p class="text-1">
+							User C - Has attended User B’s event and has taken some photos and videos of said event and now from the
+							explore page has posted these photos and videos tagging User B
+						</p>
+					</li>
+					<li>
+						<p class="text-1">
+							User A - Has now seen User C’s post on the explore page and has decided to like the post.
+						</p>
+					</li>
+					<li>
+						<p class="text-1">
+							User B - Has also seen the post and has decided to follow user b back along with like the post and post a
+							comment.
+						</p>
+					</li>
+				</ul>
+			</section>
+
+			<section data-group="group-two">
+				<p class="text-2">Project Summary: Author Portfolio Website.</p>
+				<p class="text-1">
+					A React-based web application for an independent author to showcase and sell their published and upcoming
+					books. The site features a library-themed design with integrated e-commerce functionality, allowing visitors
+					to browse books, view artwork, and make purchases seamlessly.
+					<br />
+					Author Name: Kia Beniston
+					<br />
+					Tech Stack: React frontend, Supabase database, Stripe payment processing, Clerk authentication.
+					<br />
+					Key Features: Interactive bookshelf landing page Book preview on hover Integrated purchasing system Artwork
+					gallery with print sales
+					<br />
+					Responsive design optimized for minimal scrolling and maximum conversion
+				</p>
+
+				<p class="text-2">User Stories (Non-Technical Language):</p>
+				<ul>
+					<li>
+						<p class="text-1">
+							General Visitors & Customers As a potential reader visiting the website, I want to see an attractive
+							library-themed homepage that immediately shows me what books are available, so I can quickly decide if I'm
+							interested in the author's work.
+						</p>
+					</li>
+					<li>
+						<p class="text-1">
+							As someone browsing the site, I want to hover over books on the virtual bookshelf and see a brief
+							description pop up, so I can get a taste of each story without clicking through multiple pages.
+						</p>
+					</li>
+					<li>
+						<p class="text-1">
+							As a book buyer, I want to click on a book and be taken directly to a purchase page where I can buy it
+							with just a few clicks, so the buying process is quick and straightforward.
+						</p>
+					</li>
+					<li>
+						<p class="text-1">
+							As an art enthusiast, I want to browse a dedicated artwork section where I can view and purchase small
+							prints of illustrations related to the books, so I can own physical pieces of the creative work.
+						</p>
+					</li>
+					<li>
+						<p class="text-1">
+							As a curious visitor, I want to easily find and read the author's biography and contact information on a
+							simple about page, so I can learn more about who wrote these books.
+						</p>
+					</li>
+					<li>
+						<p class="text-1">
+							As a mobile user, I want the entire website to work smoothly on my phone without excessive scrolling, so I
+							can browse and buy books easily while on the go.
+						</p>
+					</li>
+					<li>
+						<p class="text-1">
+							As a returning visitor, I want to see placeholder spaces for upcoming books alongside published ones, so I
+							know what new content to expect and can stay engaged with the author's work.
+						</p>
+					</li>
+					<li>
+						<p class="text-1">
+							As someone making a purchase, I want a secure and trusted payment system that protects my financial
+							information, so I feel confident buying books online.
+						</p>
+					</li>
+				</ul>
+			</section>
+		</main>
+	</body>
+</html>

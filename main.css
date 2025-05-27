@@ -1,0 +1,43 @@
+html,
+body {
+	min-height: 100vh;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2 {
+	transition: transform 1s var(--ease-spring-3) 0.5s, opacity 1s ease 0.5s;
+	border-radius: 4px;
+	transform: scale(1);
+	@starting-style {
+		opacity: 0;
+		transform: scale(0.2);
+	}
+}
+
+.bullet {
+	display: inline-flex;
+	align-items: center;
+	gap: 1rem;
+
+	.swatch {
+		width: 2rem;
+		height: 2rem;
+	}
+}
+
+.surface-samples {
+	.rad-shadow {
+		font-size: 1.4rem;
+	}
+}
+.hero-heading {
+	padding: 2rem;
+}
+
+ul {
+	padding: 0;
+}
+
+[data-group*='group-two'] {
+	display: none;
+}
