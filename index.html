@@ -1,335 +1,288 @@
 <!DOCTYPE html>
 <html lang="en" color-scheme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/open-props@1.7.15/open-props.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/open-props/gray-hsl.min.css" />
+    <link rel="stylesheet" href="./op.css" />
+    <link rel="stylesheet" href="./main.css" />
+    <script src="./main.js" defer></script>
+  </head>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Document</title>
-	<link rel="stylesheet" href="https://unpkg.com/open-props@1.7.15/open-props.min.css" />
-	<link rel="stylesheet" href="https://unpkg.com/open-props/gray-hsl.min.css">
-	<link rel="stylesheet" href="./op.css" />
-	<link rel="stylesheet" href="./main.css" />
-	<script src="./main.js" defer></script>
-</head>
+  <body>
+    <header class="surface-5 rad-shadow hero-heading">
+      <h1>CS106 Projects</h1>
+      <h2 class=" ">Acceptance Tests / Summaries</h2>
+      <h3 class="bullet">
+        <span class="swatch brand rad-shadow"></span>
+        <span>Group Summaries * 7</span>
+      </h3>
+    </header>
 
-<body>
-	<header class="surface-5 rad-shadow hero-heading">
-		<h1>CS106 Projects</h1>
-		<h2 class=" ">Acceptance Tests / Summaries</h2>
-		<h3 class="bullet">
-			<span class="swatch brand rad-shadow"></span>
-			<span>Group Summaries * 7</span>
-		</h3>
-	</header>
+    <main>
+      <section>
+        <div class="surface-samples">
+          <div class="surface-7 rad-shadow" data-group="josh"><span>JOSH</span></div>
+          <div class="surface-7 rad-shadow" data-group="kartik"><span>RIKHIL</span><span>VISHESH</span><span>KARTIK</span></div>
+          <div class="surface-7 rad-shadow hilight-button" data-group="sammy"><span>SAMMY</span></div>
+          <div class="surface-7 rad-shadow" data-group="joan"><span>JOAN</span></div>
+          <div class="surface-7 rad-shadow" data-group="jason"><span>JASON</span></div>
+          <div class="surface-7 rad-shadow" data-group="wilson"><span>WILSON</span></div>
+          <div class="surface-7 rad-shadow" data-group="santosh"><span>SANTOSH</span></div>
+        </div>
+      </section>
 
-	<main>
-		<section>
-			<div class="surface-samples">
-				<div class="surface-3 rad-shadow hilight-button" data-group="josh"><span>JOSH</span></div>
-				<div class="surface-2 rad-shadow" data-group="kartik">
-					<span>RIKHIL</span><span>VISHESH</span><span>KARTIK</span>
-				</div>
-				<div class="surface-1 rad-shadow" data-group="sammy"><span>SAMMY</span></div>
-				<div class="surface-4 rad-shadow" data-group="joan"><span>JOAN</span></div>
-				<div class="surface-2 rad-shadow" data-group="jason"><span>JASON</span></div>
-				<div class="surface-4 rad-shadow" data-group="wilson"><span>WILSON</span></div>
-				<div class="surface-3 rad-shadow" data-group="santosh"><span>SANTOSH</span></div>
-			</div>
-		</section>
+      <section data-information="sammy" id="sammy" class="show-information">
+        <p class="text-2">Project Summary: Employee Management System</p>
+        <p class="text-1">
+          The Employee Management System is a desktop application built using WPF, C#, and .NET 8.0, with MongoDB Atlas as the database. It's designed to help a company manage its employees efficiently, catering to
+          different roles like Admins, Managers, HR, and regular Employees. So far, we've implemented core features like adding, viewing, editing, and deleting employee records (CRUD operations), with role-based access
+          (e.g., Admins see more details than Guests). We've also added login functionality, connected to MongoDB Atlas for data storage, and set up a tabbed interface in the main window (Employees, Dashboard, Leave
+          Requests, Payroll, Admin). Currently, we're working on additional features like expanded user roles, leave requests, and payroll management, ensuring the system is secure, user-friendly, and scalable.
+        </p>
 
-		<section data-information="joan">
-			<p class="text-2">Project Summary: Restaurant Ordering and Management Workflow.</p>
-			<p class="text-1">
-				This system is designed to streamline the entire restaurant ordering and management workflow, it allows
-				customers to browse the menu, customize and place orders, while giving staff real-time visibility into
-				sales, order statuses, access to update menu, add promotions, and get insights.
-			</p>
+        <p class="text-2 sub-heading">User Stories (Non-Technical Language):</p>
+        <ul>
+          <li>
+            <p class="text-1">
+              As a new user, I want to log in with my username and password so that I can access the system securely. When I open the app, I see a login window where I can type my username (e.g., "admin") and password
+              (e.g., "admin123"). If I enter the correct details, I’m taken to the main screen with tabs like "Employees" and "Admin." If I click "Cancel," I can still use the app as a Guest but with limited access.
+            </p>
+          </li>
+          <li>
+            <p class="text-1">
+              As a Guest user, I want to view a limited list of employees so that I can see who works here without accessing sensitive details. If I skip the login by clicking "Cancel," I enter the app as a Guest. In the
+              "Employees" tab, I see a table with just the Name and Position of employees—no Contact or Role details. Restricted tabs like "Admin" and "Payroll" are hidden from me.
+            </p>
+          </li>
+        </ul>
+        <p class="text-2">Manager only:</p>
+        <ul>
+          <li>
+            <p class="text-1">
+              As a Manager, I want to edit an employee’s details so that I can fix mistakes or update their information. In the "Employees" tab, I select an employee (e.g., "John Doe") from the list and click an "Edit"
+              button. I can change details like their Position (e.g., from "Developer" to "Senior Developer") or Contact, then save. The updated details show up in the list right away.
+            </p>
+          </li>
+        </ul>
+        <p class="text-2">HR only:</p>
+        <ul>
+          <li>
+            <p class="text-1">
+              As an HR person, I want to delete an employee who has left the company so that our records stay accurate. In the "Employees" tab, I select an employee who’s no longer with us (e.g., "Jane Smith"), click a
+              "Delete" button, and confirm the action. The employee disappears from the list, ensuring our records only show current staff.
+            </p>
+          </li>
+        </ul>
 
+        <p class="text-2">Admins only:</p>
+        <ul>
+          <li>
+            <p class="text-1">
+              As an Admin, I want to see a list of all employees so that I can manage the team effectively. After logging in as an Admin, I go to the "Employees" tab and see a table with everyone’s details, like their
+              ID, Name, Position, Contact, Role, and Date of Birth. This helps me keep track of who’s on the team and their roles.
+            </p>
+          </li>
+          <li>
+            <p class="text-1">
+              As an Admin, I want to add a new employee to the system so that we can keep our records up to date. In the "Employees" tab, I click a button to add a new employee. I fill in their details—like Name (e.g.,
+              "Sarah Lee"), Position (e.g., "Designer"), Contact, Username, Password, Role, and Date of Birth—and save it. The new employee then appears in the list, and I know the system has updated.
+            </p>
+          </li>
+          <li>
+            <p class="text-1">
+              As an Admin, I want to see different tabs based on my role so that I can access the tools I need. After logging in as an Admin, I see all tabs in the main window: Dashboard, Employees, Leave Requests,
+              Payroll, and Admin. I can switch between them to manage employees, check payroll, or handle admin tasks, knowing my role gives me full access.
+            </p>
+          </li>
+          <li>
+            <p class="text-1">
+              As an Admin, I want to see different tabs based on my role so that I can access the tools I need. After logging in as an Admin, I see all tabs in the main window: Dashboard, Employees, Leave Requests,
+              Payroll, and Admin. I can switch between them to manage employees, check payroll, or handle admin tasks, knowing my role gives me full access.
+            </p>
+          </li>
+        </ul>
+      </section>
 
-			<p class="text-2 sub-heading">User Stories (Non-Technical Language):</p>
-			<ul>
-				<li>
-					<p class="text-1">
-						As a Customer, I want to view the full menu with category filters and sort by popularity so that
-						I can quickly find what I’m most interested in.
-					</p>
-				</li>
-				<li>
-					<p class="text-1">
-						As a Customer, I want to add, update, or remove items in my cart and then proceed to checkout so
-						that I can complete my order accurately and efficiently.
-					</p>
-				</li>
-				<li>
-					<p class="text-1">
-						As a Customer, I want to see my past orders and re-order with a single click so that I can
-						quickly repeat my favorite meals.
-					</p>
-				</li>
-				<li>
-					<p class="text-1">
-						As a Customer, I want to mark menu items as favorites so that I can access them easily in future
-						sessions.
-					</p>
-				</li>
-				<li>
-					<p class="text-1">
-						As a Customer, I want a dedicated “Special Deals” category so that I can discover and take
-						advantage of promotions.
-					</p>
-				</li>
+      <section data-information="joan">
+        <p class="text-2">Project Summary: Restaurant Ordering and Management Workflow.</p>
+        <p class="text-1">
+          This system is designed to streamline the entire restaurant ordering and management workflow, it allows customers to browse the menu, customize and place orders, while giving staff real-time visibility into
+          sales, order statuses, access to update menu, add promotions, and get insights.
+        </p>
 
-			</ul>
-			<p class="text-2">Admins only:</p>
-			<ul>
-				<li>
-					<p class="text-1">
-						As an Admin/Staff, I want to see total sales for today, this week, and this month so that I can
-						monitor revenue performance at a glance.
-					</p>
-				</li>
-				<li>
-					<p class="text-1">
-						As an Admin/Staff, I want to add, update, or remove menu items (including availability) so that
-						the system always reflects our current offerings.
-					</p>
-				</li>
-				<li>
-					<p class="text-1">
-						As an Admin/Staff, I want to export sales reports to CSV so that I can perform deeper analysis
-						or share data with other stakeholders.
-					</p>
-				</li>
-			</ul>
-		</section>
+        <p class="text-2 sub-heading">User Stories (Non-Technical Language):</p>
+        <ul>
+          <li>
+            <p class="text-1">As a Customer, I want to view the full menu with category filters and sort by popularity so that I can quickly find what I'm most interested in.</p>
+          </li>
+          <li>
+            <p class="text-1">As a Customer, I want to add, update, or remove items in my cart and then proceed to checkout so that I can complete my order accurately and efficiently.</p>
+          </li>
+          <li>
+            <p class="text-1">As a Customer, I want to see my past orders and re-order with a single click so that I can quickly repeat my favorite meals.</p>
+          </li>
+          <li>
+            <p class="text-1">As a Customer, I want to mark menu items as favorites so that I can access them easily in future sessions.</p>
+          </li>
+          <li>
+            <p class="text-1">As a Customer, I want a dedicated “Special Deals” category so that I can discover and take advantage of promotions.</p>
+          </li>
+        </ul>
+        <p class="text-2">Admins only:</p>
+        <ul>
+          <li>
+            <p class="text-1">As an Admin/Staff, I want to see total sales for today, this week, and this month so that I can monitor revenue performance at a glance.</p>
+          </li>
+          <li>
+            <p class="text-1">As an Admin/Staff, I want to add, update, or remove menu items (including availability) so that the system always reflects our current offerings.</p>
+          </li>
+          <li>
+            <p class="text-1">As an Admin/Staff, I want to export sales reports to CSV so that I can perform deeper analysis or share data with other stakeholders.</p>
+          </li>
+        </ul>
+      </section>
 
-		<section data-information="jason">
-			<p class="text-2">Project Summary: Doctor Appointment Application.</p>
-			<p class="text-1">
-				The users could choose a doctor that is available and book an appointment. The user need to input their
-				details when booking the appointment.
-			</p>
+      <section data-information="jason">
+        <p class="text-2">Project Summary: Doctor Appointment Application.</p>
+        <p class="text-1">The users could choose a doctor that is available and book an appointment. The user need to input their details when booking the appointment.</p>
 
+        <p class="text-2 sub-heading">User Stories (Non-Technical Language):</p>
+        <ul>
+          <li>
+            <p class="text-1">I would like to be able to search a doctor by their name because I got a recommendation from my family about that doctor.</p>
+          </li>
+          <li>
+            <p class="text-1">I would like to have a button that can show a list of doctors based on their specialty, so I can easily look up at the list of doctors that I need instead of a random list of doctors.</p>
+          </li>
+          <li>
+            <p class="text-1">I would like to have a page that can show my upcoming appointments with doctors and some details like the date, so I can just check that page if I forgot when the appointment is</p>
+          </li>
+          <li>
+            <p class="text-1">I would like a functionality that allow me to change the appointment date incase there is something emergency happened.</p>
+          </li>
+          <li>
+            <p class="text-1">
+              I would like to able change my profile details, such as my email or phone number, so if I changed my phone number or changed the email that I use, my profile details would still be valid.
+            </p>
+          </li>
+          <li>
+            <p class="text-1">I would like to be able to reset my password, in-case I forgot my password for my login details.</p>
+          </li>
+        </ul>
+        <p class="text-2">Admins only:</p>
+        <ul>
+          <li>
+            <p class="text-1">Allow admins to search for patients and delete their account.</p>
+          </li>
+        </ul>
+      </section>
 
-			<p class="text-2 sub-heading">User Stories (Non-Technical Language):</p>
-			<ul>
-				<li>
-					<p class="text-1">
-						I would like to be able to search a doctor by their name because I got a recommendation from my
-						family about that doctor.
-					</p>
-				</li>
-				<li>
-					<p class="text-1">
-						I would like to have a button that can show a list of doctors based on their specialty, so I can
-						easily look up at the list of doctors that I need instead of a random list of doctors.
-					</p>
-				</li>
-				<li>
-					<p class="text-1">
-						I would like to have a page that can show my upcoming appointments with doctors and some details
-						like the date, so I can just check that page if I forgot when the appointment is
-					</p>
-				</li>
-				<li>
-					<p class="text-1">
-						I would like a functionality that allow me to change the appointment date incase there is
-						something emergency happened.
-					</p>
-				</li>
-				<li>
-					<p class="text-1">
-						I would like to able change my profile details, such as my email or phone number, so if I
-						changed my phone number or changed the email that I use, my profile details would still be
-						valid.
-					</p>
-				</li>
-				<li>
-					<p class="text-1">
-						I would like to be able to reset my password, in-case I forgot my password for my login details.
-					</p>
-				</li>
-			</ul>
-			<p class="text-2">Admins only:</p>
-			<ul>
-				<li>
-					<p class="text-1">Allow admins to search for patients and delete their account.</p>
-				</li>
-			</ul>
-		</section>
+      <section data-information="josh">
+        <p class="text-2">Project Summary: Rallypoint</p>
+        <p class="text-1">Rallypoint is a tech startup located in Auckland NZ and has contracted you to develop their app for initial release.</p>
+        <p class="text-1">Primarily focused on event promotion they have given you a list of must have features for the app which are;</p>
+        <ul>
+          <li>
+            <p class="text-1">Users must be able to view all events posted globally.</p>
+          </li>
+          <li>
+            <p class="text-1">Access to social media aspects including chats and video and image interaction without requiring further verification than the initial account setup.</p>
+          </li>
+        </ul>
 
+        <p class="text-1">
+          The second part of the required features includes a semi automated verification system for hosts, which will determine whether or not a user is eligible to become a verified host and begin posting events.
+        </p>
+        <p class="text-1">This verification should include at least one of the following, Identity and/or Location verification.</p>
+        <p class="text-1">
+          And finally the app should be deployable across mobile platforms either ios and or android, along with web and potentially desktop compatibility. Apart from these mandatory features Rallypoints executives have
+          given you developmental discretion in regards to other features of the application.
+        </p>
 
+        <p class="text-1">
+          As this is a startup company Rallypoint has requested that dev costs and hosting should be kept to a minimum and therefore have chosen to contract you as they believe you will be able to create a functioning
+          app that is set up for scaling right from the start all while maintaining budget friendly.
+        </p>
 
+        <p class="text-2 sub-heading">User Stories (Non-Technical Language):</p>
+        <ul>
+          <li>
+            <p class="text-1">User A - Will sign up for an account and complete profile setup either through the app create account page or through the verification portal.</p>
+          </li>
+          <li>
+            <p class="text-1">User A - Now has access to standard user features including access to the map view, chat, explore and profile pages.</p>
+          </li>
+          <li>
+            <p class="text-1">
+              User B - Has completed online verification and now navigates to the add event option from the profile page and can now post their first event, and has added user A to a group chat where that event is now
+              shared to user A.
+            </p>
+          </li>
+          <li>
+            <p class="text-1">User C - Has attended User B's event and has taken some photos and videos of said event and now from the explore page has posted these photos and videos tagging User B</p>
+          </li>
+          <li>
+            <p class="text-1">User A - Has now seen User C's post on the explore page and has decided to like the post.</p>
+          </li>
+          <li>
+            <p class="text-1">User B - Has also seen the post and has decided to follow user b back along with like the post and post a comment.</p>
+          </li>
+        </ul>
+      </section>
 
-		<section data-information="josh" class="show-information">
-			<p class="text-2">Project Summary: Rallypoint</p>
-			<p class="text-1">
-				Rallypoint is a tech startup located in Auckland NZ and has contracted you to develop their app for
-				initial
-				release.
-			</p>
-			<p class="text-1">
-				Primarily focused on event promotion they have given you a list of must have features for the app which
-				are;
-			</p>
-			<ul>
-				<li>
-					<p class="text-1">Users must be able to view all events posted globally.</p>
-				</li>
-				<li>
-					<p class="text-1">
-						Access to social media aspects including chats and video and image interaction without requiring
-						further
-						verification than the initial account setup.
-					</p>
-				</li>
-			</ul>
+      <section data-information="kartik">
+        <p class="text-2">Project Summary: Author Portfolio Website.</p>
+        <p class="text-1">
+          A React-based web application for an independent author to showcase and sell their published and upcoming books. The site features a library-themed design with integrated e-commerce functionality, allowing
+          visitors to browse books, view artwork, and make purchases seamlessly.
+        </p>
+        <p class="text-1">
+          <span class="sub-heading">Author Name: Kia Beniston</span>
+          Tech Stack: React frontend, Supabase database, Stripe payment processing, Clerk authentication. Key Features: Interactive bookshelf landing page Book preview on hover Integrated purchasing system Artwork
+          gallery with print sales Responsive design optimized for minimal scrolling and maximum conversion
+        </p>
 
-			<p class="text-1">
-				The second part of the required features includes a semi automated verification system for hosts, which
-				will
-				determine whether or not a user is eligible to become a verified host and begin posting events.
-			</p>
-			<p class="text-1">
-				This verification should include at least one of the following, Identity and/or Location verification.
-			</p>
-			<p class="text-1">
-				And finally the app should be deployable across mobile platforms either ios and or android, along with
-				web and potentially desktop compatibility. Apart from these mandatory features Rallypoints executives
-				have given
-				you developmental discretion in regards to other features of the application.
-			</p>
-
-			<p class="text-1">
-				As this is a startup company Rallypoint has requested that dev costs and hosting should be kept to a
-				minimum and therefore have chosen to contract you as they believe you will be able to create a
-				functioning app
-				that is set up for scaling right from the start all while maintaining budget friendly.
-			</p>
-
-			<p class="text-2 sub-heading">User Stories (Non-Technical Language):</p>
-			<ul>
-				<li>
-					<p class="text-1">
-						User A - Will sign up for an account and complete profile setup either through the app create
-						account page or through the verification portal.
-					</p>
-				</li>
-				<li>
-					<p class="text-1">
-						User A - Now has access to standard user features including access to the map view, chat,
-						explore and profile pages.
-					</p>
-				</li>
-				<li>
-					<p class="text-1">
-						User B - Has completed online verification and now navigates to the add event option from the
-						profile page and can now post their first event, and has added user A to a group chat where that
-						event is now shared to user A.
-					</p>
-				</li>
-				<li>
-					<p class="text-1">
-						User C - Has attended User B’s event and has taken some photos and videos of said event and now
-						from the explore page has posted these photos and videos tagging User B
-					</p>
-				</li>
-				<li>
-					<p class="text-1">
-						User A - Has now seen User C’s post on the explore page and has decided to like the post.
-					</p>
-				</li>
-				<li>
-					<p class="text-1">
-						User B - Has also seen the post and has decided to follow user b back along with like the post
-						and post a comment.
-					</p>
-				</li>
-			</ul>
-		</section>
-
-		<section data-information="kartik">
-			<p class="text-2">Project Summary: Author Portfolio Website.</p>
-			<p class="text-1">
-				A React-based web application for an independent author to showcase and sell their published and
-				upcoming books. The site features a library-themed design with integrated e-commerce functionality,
-				allowing
-				visitors to browse books, view artwork, and make purchases seamlessly.
-			</p>
-			<p class="text-1">
-				<span class="sub-heading">Author Name: Kia Beniston</span>
-				Tech Stack: React frontend, Supabase database, Stripe payment processing, Clerk authentication.
-				Key Features: Interactive bookshelf landing page Book preview on hover Integrated purchasing system
-				Artwork gallery with print sales Responsive design optimized for minimal scrolling and maximum
-				conversion
-			</p>
-
-			<p class="text-2 sub-heading">User Stories (Non-Technical Language):</p>
-			<ul>
-				<li>
-					<p class="text-1">
-						General Visitors & Customers As a potential reader visiting the website, I want to see an
-						attractive
-						library-themed homepage that immediately shows me what books are available, so I can quickly
-						decide if I'm
-						interested in the author's work.
-					</p>
-				</li>
-				<li>
-					<p class="text-1">
-						As someone browsing the site, I want to hover over books on the virtual bookshelf and see a
-						brief
-						description pop up, so I can get a taste of each story without clicking through multiple pages.
-					</p>
-				</li>
-				<li>
-					<p class="text-1">
-						As a book buyer, I want to click on a book and be taken directly to a purchase page where I can
-						buy it
-						with just a few clicks, so the buying process is quick and straightforward.
-					</p>
-				</li>
-				<li>
-					<p class="text-1">
-						As an art enthusiast, I want to browse a dedicated artwork section where I can view and purchase
-						small
-						prints of illustrations related to the books, so I can own physical pieces of the creative work.
-					</p>
-				</li>
-				<li>
-					<p class="text-1">
-						As a curious visitor, I want to easily find and read the author's biography and contact
-						information on a
-						simple about page, so I can learn more about who wrote these books.
-					</p>
-				</li>
-				<li>
-					<p class="text-1">
-						As a mobile user, I want the entire website to work smoothly on my phone without excessive
-						scrolling, so I
-						can browse and buy books easily while on the go.
-					</p>
-				</li>
-				<li>
-					<p class="text-1">
-						As a returning visitor, I want to see placeholder spaces for upcoming books alongside published
-						ones, so I
-						know what new content to expect and can stay engaged with the author's work.
-					</p>
-				</li>
-				<li>
-					<p class="text-1">
-						As someone making a purchase, I want a secure and trusted payment system that protects my
-						financial
-						information, so I feel confident buying books online.
-					</p>
-				</li>
-			</ul>
-		</section>
-	</main>
-	<footer>
-		<span>End of......</span>
-	</footer>
-</body>
-
+        <p class="text-2 sub-heading">User Stories (Non-Technical Language):</p>
+        <ul>
+          <li>
+            <p class="text-1">
+              General Visitors & Customers As a potential reader visiting the website, I want to see an attractive library-themed homepage that immediately shows me what books are available, so I can quickly decide if
+              I'm interested in the author's work.
+            </p>
+          </li>
+          <li>
+            <p class="text-1">
+              As someone browsing the site, I want to hover over books on the virtual bookshelf and see a brief description pop up, so I can get a taste of each story without clicking through multiple pages.
+            </p>
+          </li>
+          <li>
+            <p class="text-1">As a book buyer, I want to click on a book and be taken directly to a purchase page where I can buy it with just a few clicks, so the buying process is quick and straightforward.</p>
+          </li>
+          <li>
+            <p class="text-1">
+              As an art enthusiast, I want to browse a dedicated artwork section where I can view and purchase small prints of illustrations related to the books, so I can own physical pieces of the creative work.
+            </p>
+          </li>
+          <li>
+            <p class="text-1">As a curious visitor, I want to easily find and read the author's biography and contact information on a simple about page, so I can learn more about who wrote these books.</p>
+          </li>
+          <li>
+            <p class="text-1">As a mobile user, I want the entire website to work smoothly on my phone without excessive scrolling, so I can browse and buy books easily while on the go.</p>
+          </li>
+          <li>
+            <p class="text-1">As a returning visitor, I want to see placeholder spaces for upcoming books alongside published ones, so I know what new content to expect and can stay engaged with the author's work.</p>
+          </li>
+          <li>
+            <p class="text-1">As someone making a purchase, I want a secure and trusted payment system that protects my financial information, so I feel confident buying books online.</p>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <span>End of......</span>
+    </footer>
+  </body>
 </html>
