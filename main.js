@@ -20,17 +20,17 @@ function setInfo(evt) {
   if (typeof attr == "string") {
     hideAllInformation();
     showSingleInformation(attr);
-    n.classList.add("hilight-button")
+    n.classList.add("hilight-button");
   }
 
- let temp = Array.from(n.parentElement.children)
+  let temp = Array.from(n.parentElement.children);
 
   temp.forEach((el) => {
     if (el != n) {
-        el.classList.remove("hilight-button");
+      el.classList.remove("hilight-button");
     }
-  
-     
+
+
   });
 }
 
@@ -45,6 +45,12 @@ function showSingleInformation(s) {
     target.classList.remove("hide-information");
     target.classList.add("show-information");
 
+    const mediaQueryList = window.matchMedia('(max-width: 768px)');
+    if (mediaQueryList.matches) {
+      target.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+    }
+
+
   }
 
   //let theList = document.querySelectorAll('section[data-information');
@@ -53,7 +59,7 @@ function showSingleInformation(s) {
 function hideAllInformation() {
   let theList = document.querySelectorAll("section[data-information");
   theList.forEach((e) => {
-     e.classList.remove("show-information");
+    e.classList.remove("show-information");
     e.classList.add("hide-information");
   });
 }
