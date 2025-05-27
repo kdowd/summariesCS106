@@ -15,23 +15,125 @@
 			<h2 class=" ">Acceptance Tests / Summaries</h2>
 			<h3 class="bullet">
 				<span class="swatch brand rad-shadow"></span>
-				<span>Group Summaries * 6</span>
+				<span>Group Summaries * 7</span>
 			</h3>
 		</header>
 
 		<main>
 			<section>
 				<div class="surface-samples">
-					<div class="surface-1 rad-shadow"><span>JOSH</span></div>
-					<div class="surface-2 rad-shadow"><span>RIKHIL/ VISHESH/KARTIK</span></div>
-					<div class="surface-3 rad-shadow"><span>SANTOSH/SAMMY</span></div>
-					<div class="surface-4 rad-shadow"><span>JOAN</span></div>
-					<div class="surface-5 rad-shadow"><span>JASON</span></div>
-					<div class="surface-6 rad-shadow"><span>WILSON</span></div>
+					<div class="surface-3 rad-shadow hilight-button" data-group="josh"><span>JOSH</span></div>
+					<div class="surface-2 rad-shadow" data-group="kartik"><span>RIKHIL</span><span>VISHESH</span><span>KARTIK</span></div>
+					<div class="surface-1 rad-shadow" data-group="sammy"><span>SAMMY</span></div>
+					<div class="surface-4 rad-shadow" data-group="joan"><span>JOAN</span></div>
+					<div class="surface-5 rad-shadow" data-group="jason"><span>JASON</span></div>
+					<div class="surface-6 rad-shadow" data-group="wilson"><span>WILSON</span></div>
+					<div class="surface-4 rad-shadow" data-group="santosh"><span>SANTOSH</span></div>
 				</div>
 			</section>
 
-			<section data-group="group-one">
+			<section data-information="joan">
+				<p class="text-2">Project Summary: Restaurant Ordering and Management Workflow.</p>
+				<p class="text-1">
+					This system is designed to streamline the entire restaurant ordering and management workflow, it allows customers to browse the menu, customize and place orders, while giving staff real-time visibility into sales, order statuses, access to update menu, add promotions, and get insights.
+				</p>
+				
+
+				<p class="text-2 sub-heading">User Stories (Non-Technical Language):</p>
+				<ul>
+					<li>
+						<p class="text-1">
+						As a Customer, I want to view the full menu with category filters and sort by popularity so that I can quickly find what I’m most interested in.
+						</p>
+					</li>
+					<li>
+						<p class="text-1">
+						As a Customer, I want to add, update, or remove items in my cart and then proceed to checkout so that I can complete my order accurately and efficiently.
+						</p>
+					</li>
+					<li>
+						<p class="text-1">
+						As a Customer, I want to see my past orders and re-order with a single click so that I can quickly repeat my favorite meals.
+						</p>
+					</li>
+					<li>
+						<p class="text-1">
+						 As a Customer, I want to mark menu items as favorites so that I can access them easily in future sessions.
+						</p>
+					</li>
+					<li>
+						<p class="text-1">
+							As a Customer, I want a dedicated “Special Deals” category so that I can discover and take advantage of promotions. 
+						</p>
+					</li>
+					 
+				</ul>
+				<p class="text-2">Admins only:</p>
+				<ul><li>
+						<p class="text-1">
+						 As an Admin/Staff, I want to see total sales for today, this week, and this month so that I can monitor revenue performance at a glance.
+						</p>
+					</li>
+					<li>
+						<p class="text-1">
+						 As an Admin/Staff, I want to add, update, or remove menu items (including availability) so that the system always reflects our current offerings.
+						</p>
+					</li>
+					<li>
+						<p class="text-1">
+						 As an Admin/Staff, I want to export sales reports to CSV so that I can perform deeper analysis or share data with other stakeholders.
+						</p>
+					</li></ul>
+			</section>
+
+			<section data-information="jason">
+				<p class="text-2">Project Summary: Doctor Appointment Application.</p>
+				<p class="text-1">
+					The users could choose a doctor that is available and  book an appointment. The user need to input their details when booking the appointment.
+				</p>
+				
+
+				<p class="text-2 sub-heading">User Stories (Non-Technical Language):</p>
+				<ul>
+					<li>
+						<p class="text-1">
+							I would like to be able to search a doctor by their name because I got a recommendation from my family about that doctor.
+						</p>
+					</li>
+					<li>
+						<p class="text-1">
+							I would like to have a button that can show a list of doctors  based on their specialty, so I can easily look up at the list of doctors that I need instead of a random list of doctors.
+						</p>
+					</li>
+					<li>
+						<p class="text-1">
+						I would like to have a page that can show my upcoming appointments with doctors and some details like the date, so I can just check that page if I forgot when the appointment is
+						</p>
+					</li>
+					<li>
+						<p class="text-1">
+							I would like a functionality that allow me to change the appointment date incase there is something emergency happened.
+						</p>
+					</li>
+					<li>
+						<p class="text-1">
+							I would like to able change my profile details, such as my email or phone number, so if I changed my phone number or changed the email that I use, my profile details would still be valid.
+						</p>
+					</li>
+					<li>
+						<p class="text-1">
+							I would like to be able to reset my password, in-case I forgot my password for my login details.
+						</p>
+					</li>
+				</ul>
+				<p class="text-2">Admins only:</p>
+				<ul><li><p class="text-1">Allow admins to search for patients and delete their account.</p></li></ul>
+			</section>
+
+
+
+
+			<section data-information="josh" class="show-information">
 				<p class="text-2">Project Summary: Rallypoint</p>
 				<p class="text-1">
 					Rallypoint is a tech startup located in Auckland NZ and has contracted you to develop their app for initial
@@ -69,7 +171,7 @@
 					set up for scaling right from the start all while maintaining budget friendly.
 				</p>
 
-				<p class="text-2">User Stories (Non-Technical Language):</p>
+				<p class="text-2 sub-heading">User Stories (Non-Technical Language):</p>
 				<ul>
 					<li>
 						<p class="text-1">
@@ -110,7 +212,7 @@
 				</ul>
 			</section>
 
-			<section data-group="group-two">
+			<section data-information="kartik">
 				<p class="text-2">Project Summary: Author Portfolio Website.</p>
 				<p class="text-1">
 					A React-based web application for an independent author to showcase and sell their published and upcoming
@@ -127,7 +229,7 @@
 					Responsive design optimized for minimal scrolling and maximum conversion
 				</p>
 
-				<p class="text-2">User Stories (Non-Technical Language):</p>
+				<p class="text-2 sub-heading">User Stories (Non-Technical Language):</p>
 				<ul>
 					<li>
 						<p class="text-1">
