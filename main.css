@@ -3,7 +3,20 @@ body {
   min-height: 100vh;
   --font-size-4: 1.3rem;
   --font-weight-2: 300;
+
   /* scroll-behavior: smooth; */
+}
+
+.my-bold {
+  font-weight: 500;
+}
+
+blockquote {
+  padding: 1.8rem;
+  p:not(:nth-last-child(1)) {
+   
+    margin-bottom: 1rem;
+  }
 }
 
 ul {
